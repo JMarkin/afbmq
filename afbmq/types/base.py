@@ -1,6 +1,7 @@
 from pydantic import BaseModel
 
 from afbmq import FB
+from afbmq.utils import json
 from afbmq.utils.mixins import ContextInstanceMixin
 
 
@@ -15,3 +16,7 @@ class FBObject(BaseModel, ContextInstanceMixin):
                                "You can fix it with setting current instance: "
                                "'fb.set_current(bot_instance)'")
         return fb
+
+    class Config:
+        json_loads = json.loads
+        json_dumps = json.dumps
