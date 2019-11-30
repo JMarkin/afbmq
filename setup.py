@@ -51,7 +51,6 @@ setuptools.setup(
     description="Python asyncio facebook messenger",
     long_description=README,
     long_description_content_type="text/markdown",
-    url="https://github.com/aiogram/aVKapi",
     packages=setuptools.find_packages(),
     install_requires=reqs,
     classifiers=(
